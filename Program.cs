@@ -15,7 +15,11 @@ namespace ConsoleApp4
             Console.WriteLine("Witaj " + name);
 
             Console.WriteLine("Podaj swoj wiek: ");
-            int wiek = int.Parse(Console.ReadLine());
+            //int wiek = int.Parse(Console.ReadLine());
+            //Chronimy sie przed błedem używając komendy int wiek; bool result = int.TryParse(Console.ReadLine(), out wiek);
+            //Zatem:
+            int wiek;
+            bool result = int.TryParse(Console.ReadLine(), out wiek);
             if (wiek < 18)
             {
                 Console.WriteLine("Masz " + wiek + ", Nie jesteś pełnooletni i nie możesz napić się piwa");
@@ -25,10 +29,18 @@ namespace ConsoleApp4
             {
                 Console.WriteLine("Masz " + wiek + ", Jesteś pełnoletni i możesz zamówić alkochol");
             }
+
+            //Program kandydowania na Prezydenta
             Console.WriteLine("A teraz sprawdzimy czy możesz kandydować na Prezydenta");
            
             Console.WriteLine("Podaj jeszcze raz  swoj wiek: ");
-            int age = int.Parse(Console.ReadLine());
+
+            //Chronimy sie przed błedem używając komendy int age; bool result = int.TryParse(Console.ReadLine(), out age);
+            //Zatem:
+            //int age = int.Parse(Console.ReadLine());
+            int age;
+            bool resultat = int.TryParse(Console.ReadLine(), out age);
+
             if (age < 18)
             {
                 Console.WriteLine("Nie jesteś pełnoletni i nie możesz kandydować na Prezydenta");
